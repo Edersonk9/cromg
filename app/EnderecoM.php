@@ -15,6 +15,7 @@ class EnderecoM extends Model
     'id_pessoa',
     'uf',
     'cidade',
+    'cep',
     'bairro',
     'logradouro',
     'numero',
