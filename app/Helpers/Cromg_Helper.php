@@ -21,3 +21,15 @@ function mask($val, $mask){
   }
   return $maskared;
 }
+
+function up_file($arq, $pasta, $nome){
+  $file = $arq;
+  $name = $nome.'_'.date('YmdHis');
+  $extension  = $arq->extension();
+  $nameFile   = "{$name}.{$extension}";
+  $upload     = $arq->storeAs('public/'.$pasta, $nameFile);
+
+  if(!$upload)return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
+
+  return $nameFile;
+}

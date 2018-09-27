@@ -101,6 +101,15 @@
                       <div class="col-2">
                         <div class="input-group">
                           <div class="input-group-prepend">
+                            <span class="input-group-text">CEP</span>
+                          </div>
+                          <input type="text" name="cep" class="form-control" value="{{ isset($rota['edit'])?$rota['edit']->cep:'' }}" onkeydown="javascript: fMasc( this, mCEP );">
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
                             <span class="input-group-text" title="Código do item">Principal</span>
                           </div>
                           <input type="checkbox" name="principal" value="1" class="form-control" {{ isset($rota['edit'])?$rota['edit']->principal == 1?'checked':'':'' }}>

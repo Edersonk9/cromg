@@ -20,10 +20,10 @@
             {{-- FORM CADASTRO --}}
             <div class="card-header">
               @if (isset($rota['edit']))
-                <form action="{{ route($rota['rota'].'.update',$rota['edit']['id_'.$rota['rota']]) }}" method="post" class="form">
+                <form action="{{ route($rota['rota'].'.update',$rota['edit']['id_'.$rota['rota']]) }}" method="post" class="form" enctype="multipart/form-data">
                 @method('PUT')
               @else
-                <form action="{{ route($rota['rota'].'.store') }}" method="post" class="form">
+                <form action="{{ route($rota['rota'].'.store') }}" method="post" class="form" enctype="multipart/form-data">
                 @endif
                 @csrf
                 <div class="row justify-content-between">
@@ -106,6 +106,14 @@
                         </div>
                       </div>
 
+                    {{-- UPLOAD --}}
+                      <div class="col-5">
+                        <div class="input-group">
+                          <input id="arquivo" type="file" name="arquivo" class="form-control" value="">
+                        </div>
+                      </div>
+                    {{-- UPLOAD --}}
+
                   </div>
 
                     <div class="row mt-3">
@@ -146,7 +154,7 @@
                       <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date registered: activate to sort column ascending">
                         Nota
                       </th>
-                      <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 79px;">
+                      <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Role: activate to sort column ascending" style="width: 120px;">
                         Ação
                       </th>
                     </tr>
@@ -189,6 +197,15 @@
                         <td>
                           {{-- ACL ACOES TABLE --}}
                           <div class="row">
+                          @if (isset($key->arquivo))
+                              <div class="">
+                                <a href="{{ asset('storage/'.$rota['pasta'].$key->id_pessoa.'/'.$key->arquivo)}}" target="new" title="{{$key->arquivo}}" class="btn btn-block btn-ghost-success">
+                                  <i class="fa fa-file-image-o"></i>
+                                </a>
+                              </div>
+                          @else
+                            <div class="btn text-dark"><i class="fa fa-ban"></i></div>
+                          @endif
 
                               <div class="">
                                 <a href="{{route($rota['rota'].'.edit',$key['id_'.$rota['rota']]) }}" class="btn btn-block btn-warning" title="Editar">

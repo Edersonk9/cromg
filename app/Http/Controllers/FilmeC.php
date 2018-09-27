@@ -8,7 +8,7 @@ use App\PessoaM;
 
 class FilmeC extends Controller
 {
-  public $rota = ['rota'=>'filme'];
+  public $rota = ['rota'=>'filme','pasta'=>'FILMES/'];
 
   public function carrega()  {
     $this->rota[$this->rota['rota']] = FilmeM::where('status','>',0)->get();
@@ -31,8 +31,14 @@ class FilmeC extends Controller
     return view($this->rota['rota'], ['rota'=>$this->rota]);
   }
 
-  public function store(Request $request, FilmeM $id)  {
-    $id->create($request->all());
+  public function store(Request $request, FilmeM $id)
+  {
+    $data = $request->all();
+
+    if($request->arquivo)
+    $data['arquivo'] = up_file($request->arquivo, $this->rota['pasta'].$request->id_pessoa.'/', $request->id_pessoa);
+
+    $id->create($data);
 
     return redirect()->back()->with(['success' => 'Cadastrado com sucesso.']);
   }
@@ -47,8 +53,13 @@ class FilmeC extends Controller
 
   public function update(Request $request, $id)
   {
+    $data = $request->all();
+
+    if($request->arquivo)
+    $data['arquivo'] = up_file($request->arquivo, $this->rota['pasta'].$request->id_pessoa.'/', $request->id_pessoa);
+
     $id = FilmeM::findOrFail($id);
-    $id->update($request->all());
+    $id->update($data);
 
     return redirect()->route($this->rota['rota'].'.index')->with(['success' => $this->rota['rota'].' alterado com sucesso.']);
   }

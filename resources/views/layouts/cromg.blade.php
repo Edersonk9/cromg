@@ -51,6 +51,12 @@
                 @yield('content')
             </main>
 
+                  <!-- FOOTER -->
+                  <footer class="container">
+                    <p class="float-right"><a href="#">Topo</a></p>
+                    <p>2018 Ederson Carmo, Projeto CROMG.</p>
+                  </footer>
+
     <!-- Bootstrap core JavaScript
     ==================================================
   -->

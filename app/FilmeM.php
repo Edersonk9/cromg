@@ -14,6 +14,7 @@ class FilmeM extends Model
     'id_filme',
     'id_pessoa',
     'titulo',
+    'arquivo',
     'lancamento',
     'diretor',
     'nota',

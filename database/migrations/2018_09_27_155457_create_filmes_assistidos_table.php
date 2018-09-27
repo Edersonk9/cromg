@@ -23,6 +23,7 @@ class CreateFilmesAssistidosTable extends Migration
       $table->string('diretor', 45)->default(null);
       $table->decimal('nota', 3, 2)->default(null);
       $table->text('sinopse');
+      $table->string('arquivo', 245)->default(null);
       $table->integer('status')->default('1');
       $table->time('created_at')->nullable()->default(null);
       $table->time('updated_at')->nullable()->default(null);
