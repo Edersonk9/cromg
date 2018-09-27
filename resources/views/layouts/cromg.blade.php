@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Teste CROMG">
     <meta name="author" content="Ederson Carmo">
-    <link rel="icon" href="../../../../favicon.ico">
+    <link rel="shortcut icon" href="{{ asset('storage/IMG/favicon.png') }}" />
 
     <title>CROMG</title>
 
