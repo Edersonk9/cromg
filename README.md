@@ -33,7 +33,7 @@ O neste teste foi desenvolvido um sistema de controle de pessoas e seus filmes a
 
 - Poderá ser utilizado bibliotecas de terceiro, qualquer modelo ou paradigma de estruturação de código desde que respeite o style coding do laravel;
 
--Colocar no README.md também as observações de como foi realizado, porque foi realizado de determinada maneira e porque usou alguma biblioteca de terceiros (o que é totalmente recomendável se necessário).
+- Colocar no README.md também as observações de como foi realizado, porque foi realizado de determinada maneira e porque usou alguma biblioteca de terceiros (o que é totalmente recomendável se necessário);
 
 ## Implementação
 
