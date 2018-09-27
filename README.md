@@ -7,59 +7,57 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## Projeto CROMG
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+O projeto foi desenvolvido conforme entendimento do teste de habilidade para a CROMG. 
+O neste teste foi desenvolvido um sistema de controle de pessoas e seus filmes assistidos. Utilizando PHP + Laravel.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requisitos
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+- Utilizar Git Hub
 
-## Learning Laravel
+- Implementar login, poderá ser tanto via session quanto via oAuth2.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of any modern web application framework, making it a breeze to get started learning the framework.
+- Criar entidades e suas respectivas tabelas de um cadastro padrão:
+• Cadastro: nome, sobrenome, titulacao, CPF, RG, e-mail e etc.
+• Endereço: Endereço completo
+• Filme que já assistiu: titulo do filme, ano de lancamento, diretor, nota do filme, sinopse do filme.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+- Cada cadastro poderá ter um número indeterminado de endereços e um número indeterminado de filmes, porém deverá ter um endereço marcado como principal;
 
-## Laravel Sponsors
+- Criar as telas para inserção e atualização dos referidos dados;
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell):
+- Criar as listas referentes aos filmes de cada usuário, lista de todos os usuários e endereços destes usuários;
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
+- Ao clicar em um cadastro, na lista de cadastros você deverá ver os detalhes deste cadastro, seja em nova página ou na mesma página através de modal ou outro elemento gráfico;
 
-## Contributing
+- Poderá ser utilizado bibliotecas de terceiro, qualquer modelo ou paradigma de estruturação de código desde que respeite o style coding do laravel;
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+-Colocar no README.md também as observações de como foi realizado, porque foi realizado de determinada maneira e porque usou alguma biblioteca de terceiros (o que é totalmente recomendável se necessário).
 
-## Security Vulnerabilities
+## Implementação
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+O projeto foi desenvolvido no padrão MVC com Laravel 5.7.
+Foi utilizado o pacote de estilização Bootstrap 4 e layout.
+Banco de dados utilizado foi o MySql.
+Os pacotes JQuery, toastrs e Datatables para funcionalidades visuais.
+O pacote font-awesome para ícones.
 
-## License
+## Particularidades do projeto
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Devido ao pequeno tamanho do projeto não foi alterada a estrutura de pastas do Laravel.
+Foram criadas algumas funções para realizar tarefas no sistema; Funções utilizando jquery e php.
+A estrutura de autenticação utilizada é a nativa do laravel.
+Algumas alterações em nomes para adequar aos padrões de criação e padrões do Laravel.
+
+## Upgrade
+
+Para uma ampliação do projeto seria necessário a alteração da estrutura de pastas.
+Implementar ACL, controle de acesso.
+Bem como definições e padrões.
+
+## Sugestões
+
+O sistema pode ser melhorado e incorporado a outros serviços já existentes no mercado.
+
+
