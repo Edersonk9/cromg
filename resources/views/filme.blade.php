@@ -27,16 +27,16 @@
                 @endif
                 @csrf
                 <div class="row justify-content-between">
-                  <div class="col-8">
+                  <div class="col-md-8 col-xs-7">
                     <div class="form-group">
                       <label for="exampleInputName2">Filmes assistidos </label>
                     </div>
                   </div>
                   {{-- ACL FORM CAD --}}
-                  <div class="col-1">
-                        <button id="btn-plus" type="button" class="btn btn-pill btn-outline-success ml-3" onclick="Mostra_form_table('{{$rota['rota']}}')">
-                          <i class='fa fa-plus'></i>
-                        </button>
+                  <div class="col-md-1 col-xs-4">
+                    <button id="btn-plus" type="button" class="btn btn-pill btn-outline-success ml-3" onclick="Mostra_form_table('{{$rota['rota']}}')">
+                      <i class='fa fa-plus'></i>
+                    </button>
                   </div>
                   {{-- ACL FORM CAD --}}
                 </div>
@@ -44,7 +44,7 @@
                   <div id="div-cad-{{$rota['rota']}}" style="display: {{isset($rota['edit'])?'':'none'}}">
                     <div class="row">
 
-                      <div class="col-3">
+                      <div class="col-md-3 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">Pessoa</span>
@@ -58,7 +58,7 @@
                         </div>
                       </div>
 
-                      <div class="col-5">
+                      <div class="col-md-5 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">Título</span>
@@ -67,7 +67,7 @@
                         </div>
                       </div>
 
-                      <div class="col-4">
+                      <div class="col-md-4 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">Lançamento</span>
@@ -79,7 +79,7 @@
 
                     <div id="div-cad-modelo" class="row mt-3">
 
-                      <div class="col-4">
+                      <div class="col-md-4 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">Diretor</span>
@@ -88,7 +88,7 @@
                         </div>
                       </div>
 
-                      <div class="col-2">
+                      <div class="col-md-2 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text" title="Código do item">Nota</span>
@@ -97,7 +97,7 @@
                         </div>
                       </div>
 
-                      <div class="col-6">
+                      <div class="col-md-6 col-xs-12">
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">Sinopse</span>
@@ -107,7 +107,7 @@
                       </div>
 
                     {{-- UPLOAD --}}
-                      <div class="col-5">
+                      <div class="col-md-5 col-xs-12 mt-xs-2">
                         <div class="input-group">
                           <input id="arquivo" type="file" name="arquivo" class="form-control" value="">
                         </div>
@@ -118,7 +118,7 @@
 
                     <div class="row mt-3">
 
-                      <div class="col-2">
+                      <div class="col-md-2 col-xs-12">
                         <button type="submit" class="btn btn-outline-success btn-block" id="submit">
                           {{ isset($rota['edit'])?"Salvar":"Cadastrar"}}
                         </button>
